@@ -9,7 +9,19 @@ const routes: Routes = [
   {
     path: 'edit-page',
     loadChildren: () => import('./edit-page/edit-page.module').then( m => m.EditPagePageModule)
-  }
+  },
+  {
+    path: 'meditacao-page',
+    loadChildren: () => import('./slides/meditacao/meditacao-page/meditacao-page.module').then( m => m.MeditacaoPagePageModule)
+  },
+  {
+    path: 'yoga-page',
+    loadChildren: () => import('./slides/yoga/yoga-page/yoga-page.module').then( m => m.YogaPagePageModule)
+  },
+  {
+    path: 'tab3',
+    loadChildren: () => import('./tab3/tab3.module').then(m => m.Tab3PageModule)
+  },
 ];
 @NgModule({
   imports: [
