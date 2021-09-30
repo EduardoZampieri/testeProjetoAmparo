@@ -49,9 +49,9 @@
   </ion-slides>
 -->
 <div class="b1">
-<ion-button href="meditacao-page" expand="block" fill="solid" size="large">Meditação</ion-button>
+<ion-button *ngFor="let slide of slides" (click)="exibirSlides(slide)" expand="block" fill="solid" size="large">{{slide.esporte}}</ion-button>
 </div>
-<div class="b2">
+<!--<div class="b2">
 <ion-button href="yoga-page" expand="block" fill="solid" size="large">Yoga</ion-button>
 </div>
 <div class="b3">
@@ -74,6 +74,6 @@
 </div>
 <div class="b9">
 <ion-button href="" expand="block" fill="solid" size="large">Meditação</ion-button>
-</div>
+</div>-->
 
 </ion-content>
