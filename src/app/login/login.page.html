@@ -1,20 +1,26 @@
 <ion-content [fullscreen]="true">
-  <div>
+  <div class="center">
     <ion-card>
       <ion-card-header>
         <img src="assets/icon/imagem_ansiedade.jpeg" alt="logo">
       </ion-card-header>
 
       <ion-card-content>
+        <ion-title class="title">Projeto Amparo</ion-title>
+
         <ion-item lines="none">
           <ion-label position="floating">Email</ion-label>
-          <ion-input type="email"></ion-input>
+          <ion-input type="email" [(ngModel)]="email"></ion-input>
         </ion-item>
+
         <ion-item lines="none">
           <ion-label position="floating">Senha</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-input type="password" [(ngModel)]="senha"></ion-input>
         </ion-item>
       </ion-card-content>
+
+      <ion-button (click)="login()" expand="full" fill="outline" color="dark">Entrar</ion-button>
+      <ion-button expand="full" fill="clear" color="dark">Cadastrar</ion-button>
     </ion-card>
   </div>
 </ion-content>
