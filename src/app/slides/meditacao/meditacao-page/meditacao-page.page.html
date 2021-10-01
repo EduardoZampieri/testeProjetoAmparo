@@ -13,11 +13,13 @@
       <h1>{{slide.video}}</h1>
     </ion-slide>
     <ion-slide>
-      <h1>{{slide.passos}}</h1>
+      <div class="div">
+        <h1 *ngFor="let passo of slide.passos">{{passo}}</h1>
+      </div>
     </ion-slide>
     <ion-slide>
       <div class="div">
-        <h1>{{slide.fotos}}</h1>
+        <h1 *ngFor="let fotos of slide.fotos">{{fotos}}</h1>
         <ion-button href="../../../tabs" fill="clear" size="small">finalizar -></ion-button>
       </div>
     </ion-slide>
