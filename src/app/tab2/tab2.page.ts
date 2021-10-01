@@ -21,6 +21,11 @@ export class Tab2Page {
       evento: 'Yoga',
       data: '11:00',
       descricao: 'descricao kk'
+    },
+    {
+      evento: 'Futebol',
+      data: '12:00',
+      descricao: 'com os parça'
     }
   ];
 

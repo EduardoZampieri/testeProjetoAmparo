@@ -15,12 +15,12 @@
     <ion-slide>
       <div class="div">
         <h1 *ngFor="let passo of slide.passos">{{passo}}</h1>
+        <!--<img *ngFor="let gif of slide.fotos" [src]="gif" alt="foto">-->
       </div>
     </ion-slide>
     <ion-slide>
       <div class="div">
-        <h1 *ngFor="let fotos of slide.fotos">{{fotos}}</h1>
-        <ion-button href="../../../tabs" fill="clear" size="small">finalizar -></ion-button>
+        <ion-button (click)="navegar()" fill="clear" size="small">finalizar -></ion-button>
       </div>
     </ion-slide>
   </ion-slides>

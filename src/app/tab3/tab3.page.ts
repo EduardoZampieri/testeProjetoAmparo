@@ -18,13 +18,16 @@ export class Tab3Page {
       esporte: 'Meditação',
       video: 'oi',
       passos: ['1 - Deite no chão', '2 - Faça flexão', '3 - Sei lá kkkk'],
-      fotos: []
+      fotos: ['', '', '']
     },
     {
       esporte: 'Yoga',
       video: 'EAE',
       passos: ['1 - Corra', '2 - Pule', '3 - Agache'],
-      fotos: []
+      fotos: [
+      'https://c.tenor.com/f_wsfdMF2vAAAAAM/bebe.gif',
+      'https://www.imagensanimadas.com/data/media/1291/pular-corda-imagem-animada-0005.gif',
+      'https://zerohora.clicrbs.com.br/rbs/image/16862349.gif?w=580']
     },
   ];
 
