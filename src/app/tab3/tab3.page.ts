@@ -10,35 +10,37 @@ import { Router } from '@angular/router';
   styleUrls: ['tab3.page.scss'],
 })
 export class Tab3Page {
-
   titulo = 'Tutoriais';
 
   slides: ISlides[] = [
     {
       esporte: 'Meditação',
-      video: 'oi',
-      passos: ['1 - Deite no chão', '2 - Faça flexão', '3 - Sei lá kkkk'],
-      fotos: ['', '', '']
+      video: 'https://www.youtube.com/embed/tGMQWqMqXh0',
+      passos: [
+        '1 - Deite no chão',
+        '2 - Faça flexão',
+        '3 - Sei lá kkkk',
+      ],
+      foto1: ['assets/icon/meditação.jpeg'],
+      foto2: [''],
     },
     {
       esporte: 'Yoga',
-      video: 'EAE',
-      passos: ['1 - Corra', '2 - Pule', '3 - Agache'],
-      fotos: [
-      'https://c.tenor.com/f_wsfdMF2vAAAAAM/bebe.gif',
-      'https://www.imagensanimadas.com/data/media/1291/pular-corda-imagem-animada-0005.gif',
-      'https://zerohora.clicrbs.com.br/rbs/image/16862349.gif?w=580']
+      video: '',
+      passos: [
+        '1 - Corra',
+        '2 - Pule',
+        '3 - Agache'
+      ],
+      foto1: [''],
+      foto2: [''],
     },
   ];
 
-  constructor(
-    public dadosService: DadosService,
-    public route: Router
-  ) {}
+  constructor(public dadosService: DadosService, public route: Router) {}
 
-  exibirSlides(slide: ISlides){
+  exibirSlides(slide: ISlides) {
     this.dadosService.guardarDados('slide', slide);
     this.route.navigateByUrl('/meditacao-page');
   }
-
 }

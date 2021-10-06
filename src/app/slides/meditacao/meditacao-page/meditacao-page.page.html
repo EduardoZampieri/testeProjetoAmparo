@@ -5,23 +5,57 @@
 </ion-header>
 
 <ion-content>
+
   <ion-slides #slides pager="true" options="slideOpts" class="slide">
+
     <ion-slide>
-      <h1>Bem vindo ao Tutorial de {{slide.esporte}}</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>{{slide.video}}</h1>
-    </ion-slide>
-    <ion-slide>
-      <div class="div">
-        <h1 *ngFor="let passo of slide.passos">{{passo}}</h1>
-        <!--<img *ngFor="let gif of slide.fotos" [src]="gif" alt="foto">-->
+      <div class="principal">
+        <div class="divimg">
+          <img [src]="slide.foto1" alt="foto">
+        </div>
+        <div class="divtexto">
+          <h1>Bem-Vindo</h1>
+          <p>Nos proximos slides apresentaremos um pequeno tutorial de <b>{{slide.esporte}}</b></p>
+        </div>
       </div>
     </ion-slide>
+
     <ion-slide>
-      <div class="div">
-        <ion-button (click)="navegar()" fill="clear" size="small">finalizar -></ion-button>
+      <div class="principal">
+        <div class="divimg">
+          <iframe width="250" height="150" src="https://www.youtube.com/embed/tGMQWqMqXh0" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="divtexto">
+          <h1>Vídeo Explicativo</h1>
+          <p>O vídeo apresenta uma forma de fazer <b>{{slide.esporte}}</b></p>
+        </div>
       </div>
     </ion-slide>
+
+    <ion-slide>
+      <div class="principal">
+        <div class="divtexto">
+          <h1><b>Passo-a-Passo</b></h1>
+          <p *ngFor="let passo of slide.passos">{{passo}}</p>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="principal">
+        <div class="divimg">
+          <img [src]="slide.foto2" alt="foto">
+        </div>
+        <div class="divtexto">
+          <p><b>Pronto pra tentar sozinho?</b></p>
+          <ion-button (click)="navegar()" fill="clear" size="small">Continue -></ion-button>
+        </div>
+      </div>
+    </ion-slide>
+
   </ion-slides>
+
 </ion-content>
