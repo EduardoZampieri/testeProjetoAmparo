@@ -1,7 +1,3 @@
-//ion-content {
-//  --background: #000000;
-//}
-
 //.center {
 //  height: 100vh;
 //  display: flex;
@@ -18,6 +14,11 @@
 //  text-decoration-color: white;
 //}
 
+ion-segment {
+  background-color: black;
+  color: white;
+}
+
 ion-slides {
   height: 100%;
 
@@ -32,9 +33,9 @@ ion-slides {
       border-color: white;
     }
 
-    .button {
-      color: white;
+    ion-button {
       background-color: black;
+      color: white;
       border-radius: 15px;
     }
   }
@@ -60,7 +61,7 @@ ion-slides {
   right: 0;
   bottom: 0;
   height: 45%;
-  background-color: brown;
+  background-color: var(--ion-color-marrom);
 
   .fundoDinamic {
     position: absolute;
@@ -70,4 +71,15 @@ ion-slides {
     background-size: contain;
     transition: all 0.5s;
   }
+
+  .span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    margin: 0 auto;
+    width: 80%;
+    color: #fff;
+  }
 }
+

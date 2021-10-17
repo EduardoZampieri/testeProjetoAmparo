@@ -1,9 +1,9 @@
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="swiper-no-swiping" color="warning">
 
   <div class="container top">
     <img src="/assets/icon/" alt="Logo">
 
-    <ion-segment (ionChange)="segmentChanged($event)" value="login">
+    <ion-segment (ionChange)="segmentChanged($event)" value="login" mode="ios">
       <ion-segment-button value="login">
         <ion-label>Login</ion-label>
       </ion-segment-button>
@@ -30,7 +30,7 @@
           <ion-input type="password" placeholder="123123" [(ngModel)]="senha"></ion-input>
         </ion-item>
 
-        <ion-button class="button ion-margin-top" (click)="login()" color="ligth" expand="block">
+        <ion-button class="button ion-margin-top" (click)="login()" color="ligth" expand="block" fill="solid">
           Entrar
         </ion-button>
       </div>
@@ -55,7 +55,7 @@
           <ion-input type="password" placeholder="123123"></ion-input>
         </ion-item>
 
-        <ion-button class="button ion-margin-top" (click)="login()" color="ligth" expand="block">
+        <ion-button class="button ion-margin-top" (click)="login()" color="ligth" expand="block" fill="solid">
           Cadastrar
         </ion-button>
       </div>
@@ -65,6 +65,11 @@
 
   <div class="totalFundoDinamic">
     <div class="fundoDinamic" [ngStyle]="{'background-position-x': fundoPosition + 'px'}"></div>
+
+    <div class="ion-text-center">
+      <span class="span">Aplicativo feito para fins de tratar a Ansiedade em estado LEVE</span>
+    </div>
+
   </div>
 
 

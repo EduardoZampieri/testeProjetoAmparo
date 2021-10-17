@@ -234,3 +234,20 @@
     --ion-card-background: #1e1e1e;
   }
 }
+
+:root {
+  --ion-color-marrom: #240000;
+  --ion-color-marrom-rgb: 36,0,0;
+  --ion-color-marrom-contrast: #ffffff;
+  --ion-color-marrom-contrast-rgb: 255,255,255;
+  --ion-color-marrom-shade: #200000;
+  --ion-color-marrom-tint: #3a1a1a; }
+
+  .ion-color-marrom {
+    --ion-color-base: var (- ion-color-brown);
+    --ion-color-base-rgb: var (- ion-color-marrom-rgb);
+    --ion-color-contrast: var (- ion-color-marrom-contrast);
+    --ion-color-contrast-rgb: var (- ion-color-marrom-contrast-rgb);
+    --ion-color-shadow: var (- ion-color-brown-shadow);
+    --ion-color-tint: var (- ion-color-marrom-tint);
+  }
