@@ -1,5 +1,74 @@
 <ion-content [fullscreen]="true">
-  <div class="center">
+
+  <div class="container top">
+    <img src="/assets/icon/" alt="Logo">
+
+    <ion-segment (ionChange)="segmentChanged($event)" value="login">
+      <ion-segment-button value="login">
+        <ion-label>Login</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="cadastrar">
+        <ion-label>Cadastro</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+  </div>
+
+  <ion-slides #slides>
+
+    <ion-slide>
+      <div class="slide-inner ion-padding">
+        <span>Login</span>
+
+        <ion-item class="itens ion-margin-top" lines="none">
+          <ion-label position="floating">E-mail</ion-label>
+          <ion-input type="email" placeholder="eduardo@gmail.com" [(ngModel)]="email"></ion-input>
+        </ion-item>
+
+        <ion-item class="itens ion-margin-top" lines="none">
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input type="password" placeholder="123123" [(ngModel)]="senha"></ion-input>
+        </ion-item>
+
+        <ion-button class="button ion-margin-top" (click)="login()" color="ligth" expand="block">
+          Entrar
+        </ion-button>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide-inner ion-padding">
+        <span>Cadastrar</span>
+
+        <ion-item class="itens ion-margin-top" lines="none">
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input type="text" placeholder="Eduardo Augusto Zampieri"></ion-input>
+        </ion-item>
+
+        <ion-item class="itens ion-margin-top" lines="none">
+          <ion-label position="floating">E-mail</ion-label>
+          <ion-input type="email" placeholder="eduardo@gmail.com"></ion-input>
+        </ion-item>
+
+        <ion-item class="itens ion-margin-top" lines="none">
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input type="password" placeholder="123123"></ion-input>
+        </ion-item>
+
+        <ion-button class="button ion-margin-top" (click)="login()" color="ligth" expand="block">
+          Cadastrar
+        </ion-button>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+
+  <div class="totalFundoDinamic">
+    <div class="fundoDinamic" [ngStyle]="{'background-position-x': fundoPosition + 'px'}"></div>
+  </div>
+
+
+  <!--<div class="center">
     <ion-card>
       <ion-card-header>
         <img src="assets/icon/imagem_ansiedade.jpeg" alt="logo">
@@ -22,5 +91,5 @@
       <ion-button (click)="login()" expand="full" fill="outline" color="dark">Entrar</ion-button>
       <ion-button expand="full" fill="clear" color="dark">Cadastrar</ion-button>
     </ion-card>
-  </div>
+  </div>-->
 </ion-content>

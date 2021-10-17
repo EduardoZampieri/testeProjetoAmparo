@@ -1,19 +1,73 @@
-ion-content {
-  --background: #000000;
+//ion-content {
+//  --background: #000000;
+//}
+
+//.center {
+//  height: 100vh;
+//  display: flex;
+//  align-items: center;
+//}
+
+//.title {
+//  text-align: center;
+//  color: white;
+//}
+
+//ion-button {
+//  text-align: center;
+//  text-decoration-color: white;
+//}
+
+ion-slides {
+  height: 100%;
+
+  .slide-inner {
+    width: 75%;
+    color: #fff;
+    background-color: gray;
+    border-radius: 10px;
+
+    .itens {
+      border-radius: 10px;
+      border-color: white;
+    }
+
+    .button {
+      color: white;
+      background-color: black;
+      border-radius: 15px;
+    }
+  }
 }
 
-.center {
-  height: 100vh;
-  display: flex;
-  align-items: center;
+.container {
+  position: absolute;
+  background-size: contain;
+  left: 0px;
+  right: 0px;
+  width: 75%;
+  margin: 0 auto;
+  z-index: 2;
+
+  &.top {
+    top: 5%;
+  }
 }
 
-.title {
-  text-align: center;
-  color: white;
-}
+.totalFundoDinamic {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45%;
+  background-color: brown;
 
-ion-button {
-  text-align: center;
-  text-decoration-color: white;
+  .fundoDinamic {
+    position: absolute;
+    top: -100px;
+    height: 100px;
+    background-image: url('/assets/icon/');
+    background-size: contain;
+    transition: all 0.5s;
+  }
 }

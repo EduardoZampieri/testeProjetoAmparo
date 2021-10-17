@@ -15,6 +15,7 @@ export class Tab3Page {
   slides: ISlides[] = [
     {
       esporte: 'Meditação',
+      // eslint-disable-next-line max-len
       video: 'https://www.youtube.com/embed/tGMQWqMqXh0',
       passos: [
         '1 - Deite no chão',
