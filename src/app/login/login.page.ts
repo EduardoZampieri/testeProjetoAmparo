@@ -1,6 +1,8 @@
+import { IUser } from './../models/IUser';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { IonSlides, ToastController } from '@ionic/angular';
+import { IonSlides, LoadingController, ToastController } from '@ionic/angular';
+import { AuthService } from '../services/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,37 +13,50 @@ export class LoginPage implements OnInit {
 
   @ViewChild(IonSlides) slides: IonSlides;
 
-  email: string;
-  senha: string;
-
   public fundoPosition = 0;
   public fundoDiff = 80;
 
-  constructor(public toastController: ToastController, private route: Router) { }
+  public userLogin: IUser = {};
+  public userRegister: IUser = {};
+
+  private loading: any;
+
+  constructor(
+    public toastController: ToastController,
+    private route: Router,
+    private loadingCtrl: LoadingController,
+    private authService: AuthService) { }
 
   ngOnInit() {
   }
 
-  login(){
-    if(this.email === 'admin@admin.com' && this.senha === 'admin'){
+  async login(){
+    await this.presentLoading();
+
+    try {
+      await this.authService.login(this.userLogin);
       this.route.navigateByUrl('/tabs/tab1');
-      this.presentToast('Bem vindo!', 'success');
-    }else{
-      this.presentToast('Erro! E-mail e/ou senha inválidos!', 'danger');
+      this.presentToast('Logado com sucesso! Seja Bem-Vindo.', 'success');
+    }catch(error) {
+      console.error(error);
+      this.presentToast(error.message, 'warning');
+    }finally {
+      this.loading.dismiss();
     }
   }
 
-  cadastrar(){
+  async register(){
+    await this.presentLoading();
 
-  }
+    try {
+      await this.authService.register(this.userRegister);
+    }catch(error) {
+      console.error(error);
 
-  async presentToast(texto: string, cor: string) {
-    const toast = await this.toastController.create({
-      message: texto,
-      color: cor,
-      duration: 2000
-    });
-    toast.present();
+      this.presentToast(error.message, 'danger');
+    }finally {
+      this.loading.dismiss();
+    }
   }
 
   segmentChanged(event: any){
@@ -52,6 +67,23 @@ export class LoginPage implements OnInit {
       this.slides.slideNext();
       this.fundoPosition -= this.fundoDiff;
     }
+  }
+
+  async presentToast(message: string, cor: string) {
+    const toast = await this.toastController.create({
+      message,
+      color: cor,
+      duration: 2000
+    });
+    toast.present();
+  }
+
+  async presentLoading() {
+    this.loading = await this.loadingCtrl.create({
+      cssClass: 'my-custom-class',
+      message: 'Por favor, aguarde...'
+    });
+    return this.loading.present();
   }
 
 }
