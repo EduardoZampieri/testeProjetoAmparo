@@ -33,3 +33,23 @@
   -webkit-transform: scale(1.2);
   transform: scale(1.5);
 }
+
+.divSair {
+
+  //position: relative;
+  margin-right: 2%;
+  margin-left: 78%;
+  height: 1%;
+  margin-bottom: 8%;
+
+  .bSair {
+    position: absolute;
+    right: 0;
+    left: 70%;
+    width: 25%;
+  }
+}
+
+.title {
+  position: absolute;
+}

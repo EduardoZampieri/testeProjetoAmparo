@@ -18,7 +18,11 @@ export class AuthService {
   }
 
   logout() {
+    return this.afa.signOut();
+  }
 
+  getAuth() {
+    return this.afa;
   }
 
 }

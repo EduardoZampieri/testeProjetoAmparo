@@ -1,8 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
+    <ion-title class="title">
       Ansiedade
     </ion-title>
+    <div class="divSair">
+      <ion-button class="bSair" (click)="logOut()" fill="clear" size="small">
+        Sair
+      </ion-button>
+    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -13,6 +18,7 @@
     </ion-toolbar>
   </ion-header>
   <!-- -------------------------------------------------------------- -->
+
   <div class="div">
     <h1>O que é?</h1>
 
