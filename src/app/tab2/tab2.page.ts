@@ -11,7 +11,9 @@ export class Tab2Page {
 
   titulo = 'Agenda';
 
-  lista: IAgenda[] = [
+  lista: IAgenda[];
+
+  listaFacil: IAgenda[] = [
     {
       evento: 'Meditação',
       data: '10:20',
@@ -29,6 +31,57 @@ export class Tab2Page {
     }
   ];
 
+  listaMedio: IAgenda[] = [
+    {
+      evento: 'Música',
+      data: '10:20',
+      descricao: 'só pra teste'
+    },
+    {
+      evento: 'Cheiros',
+      data: '11:00',
+      descricao: 'descricao kk'
+    },
+    {
+      evento: 'Correr',
+      data: '12:00',
+      descricao: 'com os parça'
+    }
+  ];
+
+  listaDificil: IAgenda[] = [
+    {
+      evento: 'Nadar',
+      data: '10:20',
+      descricao: 'só pra teste'
+    },
+    {
+      evento: 'Paraquedas',
+      data: '11:00',
+      descricao: 'descricao kk'
+    },
+    {
+      evento: 'Cambalhota',
+      data: '12:00',
+      descricao: 'com os parça'
+    }
+  ];
+
   constructor() {}
+
+  callFirst() {
+    this.lista = [];
+    this.lista = this.listaFacil;
+  };
+
+  callSecond() {
+    this.lista = [];
+    this.lista = this.listaMedio;
+  };
+
+  callThird() {
+    this.lista = [];
+    this.lista = this.listaDificil;
+  };
 
 }

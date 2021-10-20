@@ -10,18 +10,31 @@
 
   <ion-list>
 
-    <ion-item-sliding *ngFor="let item of lista">
-      <ion-item>
+    <!--<ion-item-sliding>-->
+      <ion-item *ngFor="let item of lista">
         <ion-label>{{ item.evento }}</ion-label>
         <ion-datetime [value]="item.data" min="2021-10" max="2030-12" displayFormat="DD. MMM, YYYY"
           monthShortNames="jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez">
         </ion-datetime>
         <ion-label>{{ item.descricao }}</ion-label>
       </ion-item>
-      <ion-item-options side="end">
+
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="light">
+          <ion-icon name="arrow-back-circle"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="start">
+          <ion-fab-button (click)="callFirst()"><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+          <ion-fab-button (click)="callSecond()"><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+          <ion-fab-button (click)="callThird()"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+
+      <ion-button (click)="callFirst()">Teste</ion-button>
+      <!--<ion-item-options side="end">
         <ion-item-option routerLink="/edit-page">Editar</ion-item-option>
       </ion-item-options>
-    </ion-item-sliding>
+    </ion-item-sliding>-->
 
     <!--<ion-item-sliding>
       <ion-item>
