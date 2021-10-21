@@ -11,7 +11,23 @@ export class Tab2Page {
 
   titulo = 'Agenda';
 
-  lista: IAgenda[];
+  lista: IAgenda[] = [
+    {
+      evento: 'Meditação',
+      data: '10:20',
+      descricao: 'só pra teste'
+    },
+    {
+      evento: 'Yoga',
+      data: '11:00',
+      descricao: 'descricao kk'
+    },
+    {
+      evento: 'Futebol',
+      data: '12:00',
+      descricao: 'com os parça'
+    }
+  ];
 
   listaFacil: IAgenda[] = [
     {

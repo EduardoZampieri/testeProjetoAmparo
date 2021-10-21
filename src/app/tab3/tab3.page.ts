@@ -1,9 +1,10 @@
-import { Tab2Page } from './../tab2/tab2.page';
+//import { Tab2Page } from './../tab2/tab2.page';
 import { DadosService } from './../services/slides/dados.service';
 import { ISlides } from './../models/ISlides.model';
 import { Component, ViewChild } from '@angular/core';
 import { IonSlide, IonSlides } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { IAgenda } from '../models/IAgenda.model';
 
 @Component({
   selector: 'app-tab3',
@@ -13,7 +14,7 @@ import { Router } from '@angular/router';
 export class Tab3Page {
   titulo = 'Tutoriais';
 
-  listaBotao: ISlides[];
+  //listaBotao: ISlides[];
 
   slidesFacil: ISlides[] = [
     {
@@ -96,18 +97,18 @@ export class Tab3Page {
   constructor(
     public dadosService: DadosService,
     public route: Router,
-    public listas: Tab2Page
+    //public listas: Tab2Page
     ) {
       //acho que o erro ta na igualdade da lista com a listaFacil/Medio/Dificil
-      if(this.listas.lista === this.listas.listaFacil) {
-        this.listaBotao = this.slidesFacil;
-      }
-      else if(this.listas.lista === this.listas.listaMedio) {
-        this.listaBotao = this.slidesMedio;
-      }
-      else if(this.listas.lista === this.listas.listaDificil) {
-        this.listaBotao = this.slidesDificil;
-      }
+      //if(this.listas.lista === this.listas.listaFacil) {
+      //  this.listaBotao = this.slidesFacil;
+      //}
+      //else if(this.listas.lista === this.listas.listaMedio) {
+      //  this.listaBotao = this.slidesMedio;
+      //}
+      //else if(this.listas.lista === this.listas.listaDificil) {
+      //  this.listaBotao = this.slidesDificil;
+      //}
     }
 
   exibirSlides(slide: ISlides) {

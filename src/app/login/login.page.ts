@@ -3,6 +3,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonSlides, LoadingController, ToastController } from '@ionic/angular';
 import { AuthService } from '../services/auth/auth.service';
+import { ValueAccessor } from '@ionic/angular/directives/control-value-accessors/value-accessor';
 
 @Component({
   selector: 'app-login',
