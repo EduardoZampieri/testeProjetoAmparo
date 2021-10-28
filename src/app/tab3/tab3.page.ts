@@ -5,6 +5,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonSlide, IonSlides } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { IAgenda } from '../models/IAgenda.model';
+import _ from 'lodash';
 
 @Component({
   selector: 'app-tab3',

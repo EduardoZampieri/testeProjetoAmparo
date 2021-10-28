@@ -24,9 +24,12 @@ ion-slides {
 
   .slide-inner {
     width: 75%;
-    color: #fff;
-    background-color: gray;
+    //color: #fff;
+    //background-color: gray;
+    background-image: url('/assets/icon/noite.png');
+    background-size: 200%;
     border-radius: 10px;
+    margin-top: 30%;
 
     .itens {
       border-radius: 10px;
@@ -61,13 +64,16 @@ ion-slides {
   right: 0;
   bottom: 0;
   height: 45%;
-  background-color: var(--ion-color-marrom);
+  background-color: #020257;
+  //background-color: var(--ion-color-marrom);
 
   .fundoDinamic {
     position: absolute;
     top: -100px;
+    left: 0px;
+    right: 0;
     height: 100px;
-    background-image: url('/assets/icon/');
+    background-image: url('/assets/icon/waves2.png');
     background-size: contain;
     transition: all 0.5s;
   }
@@ -83,3 +89,9 @@ ion-slides {
   }
 }
 
+.logo {
+  width: 40%;
+  height: 40%;
+  margin-right: 30%;
+  margin-left: 30%;
+}

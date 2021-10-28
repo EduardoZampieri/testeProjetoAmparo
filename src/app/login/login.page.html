@@ -1,7 +1,7 @@
-<ion-content [fullscreen]="true" class="swiper-no-swiping" color="warning">
+<ion-content [fullscreen]="true" class="swiper-no-swiping">
 
   <div class="container top">
-    <img src="/assets/icon/" alt="Logo">
+    <img src="/assets/icon/logoAmparo.jpeg" class="logo" alt="Logo">
 
     <ion-segment (ionChange)="segmentChanged($event)" value="login" mode="ios">
       <ion-segment-button value="login">
@@ -20,7 +20,7 @@
       <div class="slide-inner ion-padding">
         <span>Login</span>
 
-        <ion-item class="itens ion-margin-top" lines="none">
+        <ion-item class="itens ion-margin-top" lines="none" mode="android">
           <ion-label position="floating">E-mail</ion-label>
           <ion-input type="email" placeholder="eduardo@gmail.com" [(ngModel)]="userLogin.email"></ion-input>
         </ion-item>

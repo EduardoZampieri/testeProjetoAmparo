@@ -12,7 +12,7 @@
       <ion-title size="large">{{titulo}}</ion-title>
     </ion-toolbar>
   </ion-header>
-<!--
+  <!--
   <div class="pai">
     <div class="filho">
       <iframe class="video" src="https://www.youtube.com/embed/kYdciz35gm4" title="YouTube video player" frameborder="0"
@@ -32,7 +32,7 @@
     </div>
   </div>
 -->
-<!--
+  <!--
   <ion-slides #slides pager="true" options="slideOpts" class="slide">
     <ion-slide>
       <h1>Slide Content1</h1>
@@ -48,12 +48,13 @@
     </ion-slide>
   </ion-slides>
 -->
-<ion-searchbar showCancelButton="never" inputmode="text" placeholder="What do you wish" autocomplete="on"></ion-searchbar>
+  <ion-searchbar showCancelButton="never" inputmode="text" placeholder="What do you wish"></ion-searchbar>
 
-<div class="b1">
-<ion-button *ngFor="let slide of slidesFacil" (click)="exibirSlides(slide)" expand="block" fill="solid" size="large">{{slide.esporte}}</ion-button>
-</div>
-<!--<div class="b2">
+  <div class="b1">
+    <ion-button *ngFor="let slide of slidesFacil" (click)="exibirSlides(slide)" expand="block" fill="solid"
+      size="large">{{slide.esporte}}</ion-button>
+  </div>
+  <!--<div class="b2">
 <ion-button href="yoga-page" expand="block" fill="solid" size="large">Yoga</ion-button>
 </div>
 <div class="b3">
