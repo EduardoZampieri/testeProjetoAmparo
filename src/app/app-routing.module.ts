@@ -31,6 +31,10 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
     //canActivate: [LoginGuard]
   },
+  {
+    path: 'page-atalho',
+    loadChildren: () => import('./atalho/page-atalho/page-atalho.module').then( m => m.PageAtalhoPageModule)
+  },
 ];
 @NgModule({
   imports: [

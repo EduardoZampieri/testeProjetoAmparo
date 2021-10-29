@@ -36,7 +36,7 @@ export class LoginPage implements OnInit {
 
     try {
       await this.authService.login(this.userLogin);
-      this.route.navigateByUrl('/tabs/tab1');
+      this.route.navigate(['page-atalho']);
       this.presentToast('Logado com sucesso! Seja Bem-Vindo.', 'success');
     }catch(error) {
       console.error(error);
