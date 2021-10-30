@@ -7,11 +7,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{titulo}}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
   <!--
   <div class="pai">
     <div class="filho">
@@ -51,9 +47,19 @@
   <ion-searchbar showCancelButton="never" inputmode="text" placeholder="What do you wish"></ion-searchbar>
 
   <div class="b1">
-    <ion-button *ngFor="let slide of slidesFacil" (click)="exibirSlides(slide)" expand="block" fill="solid"
+    <ion-button *ngFor="let slide of listaBotao" (click)="exibirSlides(slide)" expand="block" fill="solid"
       size="large">{{slide.esporte}}</ion-button>
   </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="light">
+      <ion-icon name="arrow-back-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button (click)="callFirst()"><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="callSecond()"><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="callThird()"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
   <!--<div class="b2">
 <ion-button href="yoga-page" expand="block" fill="solid" size="large">Yoga</ion-button>
 </div>

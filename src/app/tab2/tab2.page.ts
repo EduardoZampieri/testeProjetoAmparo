@@ -1,3 +1,4 @@
+import { AlertController } from '@ionic/angular';
 import { IAgenda } from './../models/IAgenda.model';
 import { Component } from '@angular/core';
 import { Calendar } from '@ionic-native/calendar/ngx';
@@ -83,21 +84,79 @@ export class Tab2Page {
     }
   ];
 
-  constructor() {}
+  constructor(private alert: AlertController) {}
 
-  callFirst() {
-    this.lista = [];
-    this.lista = this.listaFacil;
+  async presentAlertRadio() {
+    const alert = await this.alert.create({
+      cssClass: 'my-custom-class',
+      header: 'Radio',
+      inputs: [
+        {
+          name: 'text1',
+          type: 'textarea',
+          label: 'Evento',
+          value: '',
+          handler: () => {
+            console.log('Radio 1 selected');
+          },
+          checked: true
+        },
+        {
+          name: 'text2',
+          type: 'textarea',
+          label: 'Hora',
+          value: 'value2',
+          handler: () => {
+            console.log('Radio 2 selected');
+          }
+        },
+        {
+          name: 'text3',
+          type: 'textarea',
+          label: 'Descrição',
+          value: 'value3',
+          handler: () => {
+            console.log('Radio 3 selected');
+          }
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel');
+          }
+        }, {
+          text: 'Ok',
+          handler: () => {
+            console.log('Confirm Ok');
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   };
 
-  callSecond() {
-    this.lista = [];
-    this.lista = this.listaMedio;
+  add() {
+    this.presentAlertRadio();
   };
 
-  callThird() {
-    this.lista = [];
-    this.lista = this.listaDificil;
-  };
+  //callFirst() {
+  //  this.lista = [];
+  //  this.lista = this.listaFacil;
+  //};
+
+  //callSecond() {
+  //  this.lista = [];
+  //  this.lista = this.listaMedio;
+  //};
+
+  //callThird() {
+  //  this.lista = [];
+  //  this.lista = this.listaDificil;
+  //};
 
 }

@@ -15,7 +15,31 @@ import _ from 'lodash';
 export class Tab3Page {
   titulo = 'Tutoriais';
 
-  //listaBotao: ISlides[];
+  listaBotao: ISlides[] = [
+    {
+      esporte: 'Meditação',
+      // eslint-disable-next-line max-len
+      video: 'https://www.youtube.com/embed/tGMQWqMqXh0',
+      passos: [
+        '1 - Deite no chão',
+        '2 - Faça flexão',
+        '3 - Sei lá kkkk',
+      ],
+      foto1: ['assets/icon/meditação.jpeg'],
+      foto2: [''],
+    },
+    {
+      esporte: 'Yoga',
+      video: '',
+      passos: [
+        '1 - Corra',
+        '2 - Pule',
+        '3 - Agache'
+      ],
+      foto1: [''],
+      foto2: [''],
+    },
+  ];
 
   slidesFacil: ISlides[] = [
     {
@@ -45,7 +69,7 @@ export class Tab3Page {
 
   slidesMedio: ISlides[] = [
     {
-      esporte: 'Meditação',
+      esporte: 'Legal',
       // eslint-disable-next-line max-len
       video: 'https://www.youtube.com/embed/tGMQWqMqXh0',
       passos: [
@@ -57,7 +81,7 @@ export class Tab3Page {
       foto2: [''],
     },
     {
-      esporte: 'Yoga',
+      esporte: 'Rin',
       video: '',
       passos: [
         '1 - Corra',
@@ -71,7 +95,7 @@ export class Tab3Page {
 
   slidesDificil: ISlides[] = [
     {
-      esporte: 'Meditação',
+      esporte: 'Chaviou',
       // eslint-disable-next-line max-len
       video: 'https://www.youtube.com/embed/tGMQWqMqXh0',
       passos: [
@@ -83,7 +107,7 @@ export class Tab3Page {
       foto2: [''],
     },
     {
-      esporte: 'Yoga',
+      esporte: 'TesteKun',
       video: '',
       passos: [
         '1 - Corra',
@@ -117,6 +141,20 @@ export class Tab3Page {
     this.route.navigateByUrl('/meditacao-page');
   }
 
+  callFirst() {
+    this.listaBotao = [];
+    this.listaBotao = this.slidesFacil;
+  };
+
+  callSecond() {
+    this.listaBotao = [];
+    this.listaBotao = this.slidesMedio;
+  };
+
+  callThird() {
+    this.listaBotao = [];
+    this.listaBotao = this.slidesDificil;
+  };
   //exibirBotao() {
   //  if(this.listas.lista === this.listas.listaFacil) {
   //    this.listaBotao = this.slidesFacil;
