@@ -1,11 +1,34 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Edite</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div>
-    <ion-input type="text" position="fixed">Prática desejada: </ion-input>
-  </div>
+<ion-content class="ion-padding">
+
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="itens.evento" placeholder="Evento"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="itens.descricao" placeholder="Descrição"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="date" [(ngModel)]="itens.data" placeholder="Horário"></ion-input>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="saveItem()" expand="block">
+      Salvar Item
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

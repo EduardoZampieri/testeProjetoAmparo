@@ -1,5 +1,6 @@
 export interface IAgenda {
-  evento: string;
-  data: string;
+  evento?: string;
+  data?: string;
   descricao?: string;
+  userId?: string;
 }

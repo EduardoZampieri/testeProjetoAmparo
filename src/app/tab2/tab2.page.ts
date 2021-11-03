@@ -1,7 +1,10 @@
+import { Router } from '@angular/router';
+import { CrudService } from './../services/crud/crud.service';
 import { AlertController } from '@ionic/angular';
 import { IAgenda } from './../models/IAgenda.model';
 import { Component } from '@angular/core';
 import { Calendar } from '@ionic-native/calendar/ngx';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-tab2',
@@ -84,73 +87,26 @@ export class Tab2Page {
     }
   ];
 
-  constructor(private alert: AlertController) {}
+  public itens = new Array<IAgenda>();
+  private itemSubscription: Subscription;
 
-  async presentAlertRadio() {
-    const alert = await this.alert.create({
-      cssClass: 'my-custom-class',
-      header: 'Radio',
-      inputs: [
-        {
-          name: 'text1',
-          type: 'textarea',
-          label: 'Evento',
-          value: '',
-          handler: () => {
-            console.log('Radio 1 selected');
-          },
-          checked: true
-        },
-        {
-          name: 'text2',
-          type: 'textarea',
-          label: 'Hora',
-          value: 'value2',
-          handler: () => {
-            console.log('Radio 2 selected');
-          }
-        },
-        {
-          name: 'text3',
-          type: 'textarea',
-          label: 'Descrição',
-          value: 'value3',
-          handler: () => {
-            console.log('Radio 3 selected');
-          }
-        }
-      ],
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          cssClass: 'secondary',
-          handler: () => {
-            console.log('Confirm Cancel');
-          }
-        }, {
-          text: 'Ok',
-          handler: (alertData) => {
-            //console.log(alertData.text1, alertData.text2, alertData.text3);
-            // eslint-disable-next-line prefer-const
-            let value1: string = alertData.text1;
-            // eslint-disable-next-line prefer-const
-            let value2: string = alertData.text2;
-            // eslint-disable-next-line prefer-const
-            let value3: string = alertData.text3;
-
-            console.log(value1, value2, value3);
-          }
-        }
-      ]
+  constructor(private alert: AlertController, private crud: CrudService, private route: Router) {
+    this.itemSubscription = this.crud.getAll().subscribe(data => {
+      this.itens = data;
     });
-
-    await alert.present();
-  };
+  }
 
   add() {
-    this.presentAlertRadio();
+    this.route.navigate(['edit-page']);
   };
+
+  async deleteItem(id: string){
+    try{
+      await this.crud.deleteItem(id);
+    }catch(error){
+      console.error(error);
+    }
+  }
 
   //callFirst() {
   //  this.lista = [];
