@@ -130,8 +130,16 @@ export class Tab2Page {
           }
         }, {
           text: 'Ok',
-          handler: () => {
-            console.log('Confirm Ok');
+          handler: (alertData) => {
+            //console.log(alertData.text1, alertData.text2, alertData.text3);
+            // eslint-disable-next-line prefer-const
+            let value1: string = alertData.text1;
+            // eslint-disable-next-line prefer-const
+            let value2: string = alertData.text2;
+            // eslint-disable-next-line prefer-const
+            let value3: string = alertData.text3;
+
+            console.log(value1, value2, value3);
           }
         }
       ]
