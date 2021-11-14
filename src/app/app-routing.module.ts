@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./edit-page/edit-page.module').then( m => m.EditPagePageModule)
   },
   {
+    path: 'edit-page/:id',
+    loadChildren: () => import('./edit-page/edit-page.module').then( m => m.EditPagePageModule)
+  },
+  {
     path: 'meditacao-page',
     loadChildren: () => import('./slides/meditacao/meditacao-page/meditacao-page.module').then( m => m.MeditacaoPagePageModule)
   },

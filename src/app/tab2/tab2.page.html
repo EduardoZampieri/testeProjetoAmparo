@@ -22,31 +22,32 @@
         </p>
       </ion-label>
     </ion-item>
+  </ion-list>
 
-    <ion-list>
-
-      <ion-item-sliding *ngFor="let agenda of itens">
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of itens">
+      <ion-item [routerLink]="['/edit-page', item.id]">
         <ion-label>
-          {{agenda.evento}}
-          <p>{{agenda.descricao}}</p>
-          <p>{{agenda.data | date:'short'}}</p>
+          {{item.evento}}
+          <p>{{item.descricao}}</p>
         </ion-label>
 
-        <ion-note slot="end">{{agenda.data | date:'short'}}</ion-note>
+        <ion-note slot="end">{{item.data | date:'short'}}</ion-note>
 
-        <ion-item-options slide="end">
+        <ion-item-options slide="end" (click)="deleteItem">
           <ion-item-option color="danger">
             <ion-icon slot="top" name="trash"></ion-icon>
             Excluir
           </ion-item-option>
         </ion-item-options>
-      </ion-item-sliding>
+      </ion-item>
+    </ion-item-sliding>
 
-    </ion-list>
+  </ion-list>
 
 
-    <!--<ion-item-sliding>-->
-    <!--<ion-item *ngFor="let item of lista">
+  <!--<ion-item-sliding>-->
+  <!--<ion-item *ngFor="let item of lista">
       <ion-label>{{ item.evento }}</ion-label>
       <ion-datetime [value]="item.data" min="2021-10" max="2030-12" displayFormat="DD. MMM, YYYY"
         monthShortNames="jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez">
@@ -54,7 +55,7 @@
       <ion-label>{{ item.descricao }}</ion-label>
     </ion-item>-->
 
-    <!--<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <!--<ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button color="light">
           <ion-icon name="arrow-back-circle"></ion-icon>
         </ion-fab-button>
@@ -65,12 +66,12 @@
         </ion-fab-list>
       </ion-fab>-->
 
-    <!--<ion-item-options side="end">
+  <!--<ion-item-options side="end">
         <ion-item-option routerLink="/edit-page">Editar</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>-->
 
-    <!--<ion-item-sliding>
+  <!--<ion-item-sliding>
       <ion-item>
         <ion-label>Item</ion-label>
         <ion-datetime value="2021-10-15" min="2021-10" max="2030-12" displayFormat="DD. MMM, YYYY"
@@ -178,7 +179,6 @@
       </ion-item-options>
     </ion-item-sliding>-->
 
-  </ion-list>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button color="light" (click)="add()">
       <ion-icon name="add-outline"></ion-icon>

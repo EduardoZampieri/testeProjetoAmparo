@@ -26,11 +26,11 @@ export class EditPagePage implements OnInit {
     private crud: CrudService,
     private navCtrl: NavController
   ) {
-    this.itemId = this.activeRoute.snapshot.params.id;
+    // eslint-disable-next-line @typescript-eslint/dot-notation
+    this.itemId = this.activeRoute.snapshot.params['id'];
 
-    if (this.itemId){
-      this.loadItens();
-    }
+    // eslint-disable-next-line curly
+    if (this.itemId) this.loadItens();
   }
 
   ngOnInit() { }
@@ -43,6 +43,7 @@ export class EditPagePage implements OnInit {
   }
 
   loadItens() {
+    console.log('Estou sendo chamado');
     this.itemSubscription = this.crud.getItem(this.itemId).subscribe(data => {
       this.itens = data;
     });
