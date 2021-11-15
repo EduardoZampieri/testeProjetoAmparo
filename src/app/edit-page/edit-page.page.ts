@@ -94,4 +94,12 @@ export class EditPagePage implements OnInit {
     return this.loading.present();
   }
 
+  async deleteItem(id: string){
+    try{
+      await this.crud.deleteItem(id);
+    }catch(error){
+      console.error(error);
+    }
+  }
+
 }
