@@ -7,12 +7,16 @@
 <ion-content>
 
   <!--on-mouseover='over()'-->
-  <div on-mousedown='down()' class="mainInfo">
+  <!-- <div on-mousedown='down()' class="mainInfo">
     <ion-fab class="info" vertical="bottom" horizontal="end">
       <ion-fab-button color="medium">
         <ion-icon name="information-outline"></ion-icon>
       </ion-fab-button>
     </ion-fab>
+  </div> -->
+
+  <div>
+    <ion-icon on-mousedown='down()' class="icon" name="information-outline"></ion-icon>
   </div>
 
   <ion-button (click)="btnSobre()" expand="block" fill="solid">Sobre</ion-button>
