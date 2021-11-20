@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title class="title">
-      Ansiedade
+      Sobre
     </ion-title>
     <div class="divSair">
       <ion-button class="bSair" (click)="logOut()" fill="clear" size="small">
@@ -56,8 +56,13 @@
     </p>
   </div>
 
-  <div class="container">
-    <img src="assets/icon/imagem_ansiedade.jpeg">
-  </div>
+  <ion-slides pager="true" [options]="sliderOpts" zoom>
+    <ion-slide>
+      <div class="swiper-zoom-container sizeSlide">
+        <img src="assets/icon/imagem_ansiedade.jpeg">
+      </div>
+    </ion-slide>
+  </ion-slides>
+
 
 </ion-content>

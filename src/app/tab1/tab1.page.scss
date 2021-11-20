@@ -5,33 +5,14 @@
 .divp {
   text-indent: 1.5em;
   margin-top: 0.83em;
-  text-align: justify;
-  word-break: break-all;
+  text-align: left;
+  margin-right: 0.70em;
 }
 
 .primerp {
   margin-top: 0.83em;
-  text-align: justify;
-  word-break: break-all;
-}
-
-.container {
-  position: relative;
-  border: 1px solid #000;
-  overflow: hidden;
-  width: 90%;
-  margin: 5%;
-}
-.container img {
-  max-width: 100%;
-  -moz-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-.container:hover img {
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.5);
+  text-align: left;
+  margin-right: 0.83em;
 }
 
 .divSair {
@@ -52,4 +33,9 @@
 
 .title {
   position: absolute;
+}
+
+.sizeSlide {
+  width: 90%;
+  margin-bottom: 5%;
 }

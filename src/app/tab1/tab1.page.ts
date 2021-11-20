@@ -11,6 +11,12 @@ export class Tab1Page {
 
   message = 'Deslogado';
 
+  sliderOpts = {
+    zoom: {
+      maxRatio: 2
+    }
+  };
+
   constructor(
     private authService: AuthService,
     private router: Router

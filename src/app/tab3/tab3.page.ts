@@ -30,7 +30,7 @@ export class Tab3Page {
     },
     {
       esporte: 'Yoga',
-      video: '',
+      video: 'https://youtu.be/ao8376g9O_A',
       passos: [
         '1 - Corra',
         '2 - Pule',
