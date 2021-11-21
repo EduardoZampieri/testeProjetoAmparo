@@ -77,7 +77,7 @@ export class Tab3Page {
         '2 - Faça flexão',
         '3 - Sei lá kkkk',
       ],
-      foto1: ['assets/icon/meditação.jpeg'],
+      foto1: ['assets/icon/'],
       foto2: [''],
     },
     {
@@ -97,13 +97,13 @@ export class Tab3Page {
     {
       esporte: 'Chaviou',
       // eslint-disable-next-line max-len
-      video: 'https://www.youtube.com/embed/tGMQWqMqXh0',
+      video: 'https://youtu.be/ATXlJ5RPOxI',
       passos: [
         '1 - Deite no chão',
         '2 - Faça flexão',
         '3 - Sei lá kkkk',
       ],
-      foto1: ['assets/icon/meditação.jpeg'],
+      foto1: ['assets/icon/'],
       foto2: [''],
     },
     {
