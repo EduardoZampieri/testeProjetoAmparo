@@ -21,9 +21,19 @@ export class Tab3Page {
       // eslint-disable-next-line max-len
       video: 'https://www.youtube.com/embed/tGMQWqMqXh0',
       passos: [
-        '1 - Deite no chão',
-        '2 - Faça flexão',
-        '3 - Sei lá kkkk',
+        '1 - Reservar um tempo',
+        '2 - Encontrar um local calmo',
+        '3 - Adotar uma postura confortável',
+        '4 - Controlar a respiração',
+        '5 - Focar a atenção'
+      ],
+      beneficios: [
+        'Auxílio no tratamento da depressão e diminuição das chances de recaída',
+        'Controle do estresse e a ansiedade',
+        'Diminuição da insônia',
+        'Melhora do foco e do rendimento no trabalho e estudos',
+        'Ajuda no controle da pressão alta',
+        'Ajuda no tratamento de distúrbios alimentares e obsessivo-compulsivos'
       ],
       foto1: ['assets/icon/meditação.jpeg'],
       foto2: [''],
@@ -36,6 +46,9 @@ export class Tab3Page {
         '2 - Pule',
         '3 - Agache'
       ],
+      beneficios: [
+        ''
+      ],
       foto1: [''],
       foto2: [''],
     },
@@ -47,9 +60,19 @@ export class Tab3Page {
       // eslint-disable-next-line max-len
       video: 'https://www.youtube.com/embed/tGMQWqMqXh0',
       passos: [
-        '1 - Deite no chão',
-        '2 - Faça flexão',
-        '3 - Sei lá kkkk',
+        '1 - Reservar um tempo',
+        '2 - Encontrar um local calmo',
+        '3 - Adotar uma postura confortável',
+        '4 - Controlar a respiração',
+        '5 - Focar a atenção'
+      ],
+      beneficios: [
+        'Auxílio no tratamento da depressão e diminuição das chances de recaída',
+        'Controle do estresse e a ansiedade',
+        'Diminuição da insônia',
+        'Melhora do foco e do rendimento no trabalho e estudos',
+        'Ajuda no controle da pressão alta',
+        'Ajuda no tratamento de distúrbios alimentares e obsessivo-compulsivos'
       ],
       foto1: ['assets/icon/meditação.jpeg'],
       foto2: [''],
@@ -58,11 +81,20 @@ export class Tab3Page {
       esporte: 'Yoga',
       video: '',
       passos: [
-        '1 - Corra',
-        '2 - Pule',
-        '3 - Agache'
+        '1 - Tenha disciplina',
+        '2 - Escolha um ambiente relaxante',
+        '3 - Não alimente-se antes de praticar Yoga',
+        '4 - Use roupas bem confortáveis',
+        '5 - Atente-se aos limites do seu corpo',
+        '6 - Leve a Yoga para a sua vida'
       ],
-      foto1: [''],
+      beneficios: [
+        'Ajuda no tratamento da depressão e da ansiedade',
+        'Aumenta a qualidade do sono',
+        'Auxilia no emagrecimento',
+        'Permite uma maior flexibilidade'
+      ],
+      foto1: ['assets/icon/yoga.jpeg'],
       foto2: [''],
     },
   ];
@@ -77,6 +109,9 @@ export class Tab3Page {
         '2 - Faça flexão',
         '3 - Sei lá kkkk',
       ],
+      beneficios: [
+        ''
+      ],
       foto1: ['assets/icon/'],
       foto2: [''],
     },
@@ -87,6 +122,9 @@ export class Tab3Page {
         '1 - Corra',
         '2 - Pule',
         '3 - Agache'
+      ],
+      beneficios: [
+        ''
       ],
       foto1: [''],
       foto2: [''],
@@ -103,6 +141,9 @@ export class Tab3Page {
         '2 - Faça flexão',
         '3 - Sei lá kkkk',
       ],
+      beneficios: [
+        ''
+      ],
       foto1: ['assets/icon/'],
       foto2: [''],
     },
@@ -113,6 +154,9 @@ export class Tab3Page {
         '1 - Corra',
         '2 - Pule',
         '3 - Agache'
+      ],
+      beneficios: [
+        ''
       ],
       foto1: [''],
       foto2: [''],

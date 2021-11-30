@@ -44,12 +44,23 @@
 
     <ion-slide>
       <div class="principal">
-        <div class="divimg">
-          <img [src]="slide.foto2" alt="foto">
-        </div>
         <div class="divtexto">
-          <p><b>Pronto pra tentar sozinho?</b></p>
-          <ion-button (click)="navegar()" fill="clear" size="small">Continue -></ion-button>
+          <h1><b>Benefícios</b></h1>
+          <p *ngFor="let beneficios of slide.beneficios">{{beneficios}}</p>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="principal">
+        <!-- <div class="divimg">
+          <img [src]="slide.foto2" alt="foto">
+        </div> -->
+        <div class="centralizar">
+          <div class="divtexto">
+            <p><b>Pronto pra tentar sozinho?</b></p>
+            <ion-button (click)="navegar()" fill="clear" size="small">Continue -></ion-button>
+          </div>
         </div>
       </div>
     </ion-slide>
