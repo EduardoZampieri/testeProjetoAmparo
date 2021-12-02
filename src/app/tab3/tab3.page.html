@@ -44,20 +44,31 @@
     </ion-slide>
   </ion-slides>
 -->
-  <ion-searchbar showCancelButton="never" inputmode="text" placeholder="What do you wish"></ion-searchbar>
 
-  <div class="b1">
-    <ion-button color="light" *ngFor="let slide of listaBotao" (click)="exibirSlides(slide)" expand="block" fill="solid"
-      size="large">{{slide.esporte}}</ion-button>
-  </div>
+  <!-- <div class="titulobox">
+    <h3 class="titulo">Atividades para {{tituloesp}}</h3>
+  </div> -->
+
+  <ion-searchbar placeholder="Tente 'meditação'" [(ngModel)]="searchTerm" showCancelButton="focus" animated>
+  </ion-searchbar>
+
+    <ion-button color="light" *ngFor="let slide of listaBotao | filter:searchTerm" (click)="exibirSlides(slide)"
+      expand="block" fill="solid" size="large">{{slide.esporte}}</ion-button>
+
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button color="light">
       <ion-icon name="arrow-back-circle"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="start">
-      <ion-fab-button (click)="callFirst()"><ion-icon name="body-outline"></ion-icon></ion-fab-button>
-      <ion-fab-button (click)="callSecond()"><ion-icon name="headset-outline"></ion-icon></ion-fab-button>
-      <ion-fab-button (click)="callThird()"><ion-icon name="barbell-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="callFirst()">
+        <ion-icon name="body-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="callSecond()">
+        <ion-icon name="headset-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="callThird()">
+        <ion-icon name="barbell-outline"></ion-icon>
+      </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
   <!--<div class="b2">

@@ -51,6 +51,7 @@ export class LoginPage implements OnInit {
 
     try {
       await this.authService.register(this.userRegister);
+      this.presentToast('Cadastrado com sucesso!', 'danger');
     }catch(error) {
       console.error(error);
 
